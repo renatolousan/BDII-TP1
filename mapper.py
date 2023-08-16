@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 import sys
+import re
 
 def tokenize(text):
-    return text.split()
+    return re.findall(r'\b\w+\b', text.lower())
 
 def main():
     for line in sys.stdin:
